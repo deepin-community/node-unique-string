@@ -1,0 +1,13 @@
+Description: fix for crypto-random-string 3
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-05-28
+
+--- a/index.js
++++ b/index.js
+@@ -1,4 +1,4 @@
+ 'use strict';
+ const cryptoRandomString = require('crypto-random-string');
+ 
+-module.exports = () => cryptoRandomString(32);
++module.exports = () => cryptoRandomString({length:32});
